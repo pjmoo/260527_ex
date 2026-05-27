@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&amp;family=Climate+Crisis:wght@400;500;700&amp;family=Hanken+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-secondary-fixed": "#351000", "on-surface": "#b7eaff", "inverse-surface": "#b7eaff", "tertiary-fixed-dim": "#00dbe7", "on-tertiary": "#00363a", "error-container": "#93000a", primary: "#d5bbff", "surface-container-high": "#002e3b", "secondary-fixed": "#ffdbcc", "inverse-on-surface": "#003543", "on-primary-fixed": "#250a4c", "primary-container": "#735a9d", "on-secondary": "#561f00", "on-tertiary-fixed-variant": "#004f54", "inverse-primary": "#6a5294", "tertiary-container": "#007279", "secondary-fixed-dim": "#ffb693", "primary-fixed": "#ecdcff", "surface-variant": "#003a49", "on-primary-fixed-variant": "#523a7a", "primary-fixed-dim": "#d5bbff", secondary: "#ffb693", "on-error-container": "#ffdad6", "on-surface-variant": "#ccc3d8", tertiary: "#00dbe7", "on-secondary-fixed-variant": "#7a3000", "tertiary-fixed": "#74f5ff", "surface-bright": "#003f4f", background: "#00161d", "on-secondary-container": "#572000", "on-primary-container": "#eee0ff", outline: "#958da1", surface: "#00161d", "surface-container-lowest": "#001017", "secondary-container": "#fe6b00", "surface-dim": "#00161d", "on-error": "#690005", "on-tertiary-fixed": "#002022", "outline-variant": "#4a4455", "on-tertiary-container": "#8af6ff", error: "#ffb4ab", "on-primary": "#3b2362", "surface-container-low": "#001f28", "surface-container-highest": "#003a49", "surface-tint": "#d5bbff", "surface-container": "#00232d", "on-background": "#b7eaff"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {gutter: "16px", "stack-lg": "32px", "stack-md": "16px", "stack-sm": "8px", "container-padding": "24px", unit: "8px"}, fontFamily: {"headline-lg-mobile": ["Sora"], "label-md": ["Hanken Grotesk"], "body-lg": ["Hanken Grotesk"], "headline-lg": ["Sora"], "body-md": ["Hanken Grotesk"], "headline-md": ["Sora"], "display-lg": ["Sora"], headline: ["Arimo"], display: ["Arimo"], body: ["Climate Crisis"], label: ["Hanken Grotesk"]}, fontSize: {"headline-lg-mobile": ["28px", {lineHeight: "36px", fontWeight: "700"}], "label-md": ["14px", {lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600"}], "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}], "headline-lg": ["32px", {lineHeight: "40px", fontWeight: "700"}], "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "32px", fontWeight: "600"}], "display-lg": ["48px", {lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "800"}]}}}};</script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(210, 187, 255, 0.2);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-outline-variant/20 shadow-sm flex justify-between items-center px-container-padding py-stack-sm h-16">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 duration-200 p-2 hover:bg-surface-variant/30 rounded-full">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="font-headline-md-mobile text-headline-md-mobile font-black tracking-tighter text-primary">ANIXEL</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="active:scale-95 duration-200 p-2 hover:bg-surface-variant/30 rounded-full">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+</button>
+<button class="active:scale-95 duration-200 p-2 hover:bg-surface-variant/30 rounded-full">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+</button>
+</div>
+</header>
+<!-- Genre Header Section -->
+<main class="mt-20 px-container-padding">
+<section class="py-stack-lg flex items-end justify-between">
+<div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Fantasy</h2>
+<p class="font-label-md text-label-md text-on-surface-variant mt-1">Discover otherworldly realms and magic.</p>
+</div>
+<div class="flex gap-2">
+<span class="font-label-md text-label-md bg-primary-container/20 text-primary px-3 py-1 rounded-full border border-primary/30">482 Titles</span>
+</div>
+</section>
+<!-- Filters/Sub-genres -->
+<nav class="flex gap-3 overflow-x-auto pb-stack-md scrollbar-hide no-scrollbar">
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md">All Fantasy</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-variant/30 text-on-surface-variant font-label-md text-label-md hover:bg-surface-variant/50 transition-colors">Isekai</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-variant/30 text-on-surface-variant font-label-md text-label-md hover:bg-surface-variant/50 transition-colors">Dark Fantasy</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-variant/30 text-on-surface-variant font-label-md text-label-md hover:bg-surface-variant/50 transition-colors">Magic</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface-variant/30 text-on-surface-variant font-label-md text-label-md hover:bg-surface-variant/50 transition-colors">Mythology</button>
+</nav>
+<!-- Grid Content -->
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-gutter mt-stack-md">
+<!-- Anime Card 1 -->
+<div class="group relative flex flex-col gap-stack-sm cursor-pointer transition-transform duration-300 hover:-translate-y-2">
+<div class="aspect-[2/3] rounded-xl overflow-hidden relative shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A cinematic anime poster for a high fantasy series featuring a sprawling celestial castle floating above a vibrant, purple-hued nebula. The art style is hyper-detailed with dramatic glowing magical circles and crystalline structures. The lighting is ethereal and atmospheric, emphasizing a sense of wonder and epic scale with deep violet and neon cyan highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEim9s8cKnroBBLgJMSZ9tFLakKmCxVGa-Kudw2mnBBUCUnShOwXIMNavPeIG7nYmHbmbjDQyuwD0aEQ7TfArznUglzn-NN0fI_8Rki5Gnke7C3suVQqmyqnALfVC5O0XUmNnCwTBQS3ZZSjJ5X1A3JKHC71rcC_7DOCpoD1zfMXS4IoJ52ZOCzJESi1cdnYQq9Jo9fhTYaWJkwXPLw3BfhTAKlr2eLu_JMRnBpSasbCpYbWjNNqfeoBULMrX3RQDh6b8U1pIAxdnN"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-md font-label-md text-[10px] uppercase tracking-wider font-bold">New</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5">
+<h3 class="font-label-md text-label-md text-on-surface line-clamp-1 group-hover:text-primary transition-colors">Celestial Resonance</h3>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-[12px] text-on-surface-variant">24 Eps</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-md text-[12px] text-on-surface-variant">Studio Mir</span>
+</div>
+</div>
+</div>
+<!-- Anime Card 2 -->
+<div class="group relative flex flex-col gap-stack-sm cursor-pointer transition-transform duration-300 hover:-translate-y-2">
+<div class="aspect-[2/3] rounded-xl overflow-hidden relative shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Intense anime-style artwork of a dragon knight in ornate obsidian armor, standing on a volcanic cliffside during a blood moon eclipse. The sky is a deep crimson with burning ash particles floating in the air. The mood is dark and heroic, featuring sharp edges and dramatic high-contrast lighting that illuminates the intricate engravings on the knight's armor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnNQmG4LpMX3PRX_HYJVh-kbS7jz6fLCxaircY9TkP_70ghnmFDZ9szayiCwApM5Ay-kxhR2zYqWuMVarbsugC0J3qa5n_d62kPck_-5sB5JzDjA1FWkgAIRdCnqokf5FlnL3j3C_HcjyYapt3ohyyj0igHaW_c9NaReGOw3NUn3hTs5HpRDbmmRSEnL1vNXur-BmS8EOeMPUtGWU2CxfMDkCWZ3SrKPbf2KOWy4BqUegqp33h1ijVgtg4rFXjoU9M5l9L2uleRaa_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-2 right-2">
+<span class="bg-surface-container/80 backdrop-blur-md text-primary px-2 py-0.5 rounded-md font-label-md text-[10px] border border-primary/20">4.9 ★</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5">
+<h3 class="font-label-md text-label-md text-on-surface line-clamp-1 group-hover:text-primary transition-colors">Obsidian Blade Chronicle</h3>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-[12px] text-on-surface-variant">12 Eps</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-md text-[12px] text-on-surface-variant">Mappa</span>
+</div>
+</div>
+</div>
+<!-- Anime Card 3 -->
+<div class="group relative flex flex-col gap-stack-sm cursor-pointer transition-transform duration-300 hover:-translate-y-2">
+<div class="aspect-[2/3] rounded-xl overflow-hidden relative shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Serene anime landscape depicting a mystical forest where the trees are made of glowing translucent glass. Gentle blue spirits float among the branches like fireflies. The color palette is cool and soothing with shades of turquoise, azure, and soft silver. The lighting is diffused and magical, creating a tranquil yet mysterious atmosphere characteristic of high-end animation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwRZoAX8SE90ERurQfVjWc9TgXfDBcwo8d4DSi8Svsdkx8DxozowGQRZr_rrN4C8IcU0NA9Ap0MCh__VxDr93Ib684hjpo0eiCoZB7Uyr4MX5Th4I-Oq_MvtN0XrWGp6cueLGmfbAP_D_VNV8LWgxd70aWnN81hX_l5kYngaNNQ4mK7vHqZVTLBtLXZZGF6smhgbxxHPwLmqOU4U9MtDF8T-b2Syz5WPgVLJV9z9b0hgCmRsPL-Itwvx4Xyjq0Jie1D1J1XB43rsBh"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="flex flex-col gap-0.5">
+<h3 class="font-label-md text-label-md text-on-surface line-clamp-1 group-hover:text-primary transition-colors">Glass Woods Whisper</h3>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-[12px] text-on-surface-variant">Movie</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-md text-[12px] text-on-surface-variant">Ufotable</span>
+</div>
+</div>
+</div>
+<!-- Anime Card 4 -->
+<div class="group relative flex flex-col gap-stack-sm cursor-pointer transition-transform duration-300 hover:-translate-y-2">
+<div class="aspect-[2/3] rounded-xl overflow-hidden relative shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Cyberpunk fantasy anime visual with a character casting a spell that manifests as digital code and geometric glitch patterns. The setting is a rainy alleyway in a neon-lit futuristic city. The aesthetic combines traditional fantasy elements with a modern tech-noir look, using a palette of electric purple, deep magenta, and cold grey, with high-octane glow effects." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv5ZbqxaV_FCbnM_ACdklBMD0EXVo33rQNKRe6wAd7T-kQlf_dpouM1rjnHXyfeex1eTK2FshSnje8IFGQ4jo-YPq_2Qvn8ucEFm6t1jsePlwqTuLxrcEKQFQ7CP5xMNES8lprJhUem-bTMzuxy46yjNCP-YCiaY4CMGwojHSkGgT_MQdrKq8BZi81EUO3ZwV9ZfntpXmVjwNrcaF7AXqMeQ5qadFEBGWaFZFvbOu9N8m6GhwVfQO2rXFyswO8LiZRNmVsEir9IBun"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="flex flex-col gap-0.5">
+<h3 class="font-label-md text-label-md text-on-surface line-clamp-1 group-hover:text-primary transition-colors">Digital Spellweaver</h3>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-[12px] text-on-surface-variant">48 Eps</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-md text-[12px] text-on-surface-variant">Sunrise</span>
+</div>
+</div>
+</div>
+<!-- More Cards for Grid Completeness -->
+<!-- Repeat Pattern with varying data-alt descriptions -->
+<div class="group relative flex flex-col gap-stack-sm cursor-pointer transition-transform duration-300 hover:-translate-y-2">
+<div class="aspect-[2/3] rounded-xl overflow-hidden relative shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Beautiful anime-style illustration of an ancient sorceress standing in a library of infinite books that spiral into the heavens. Shafts of golden sunlight pierce through high arched windows, illuminating dust motes and floating parchment. The scene is warm and nostalgic, using a rich palette of gold, deep mahogany, and parchment white to create a scholarly and epic fantasy mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrZgdx6C4AkvtuwFMDIvajMD7IK1XRR75FyiP4e7PBtN8ExHbT96A5PjwHFCcMwrWd_mcr3ApqjefIwjIJAz2jGKppzOUcC_aL-ftiXEUXBQEqHbCuDSf_YjpchcczUSC4d0jP8bAWCVs1zD47U2AC1HuSpTNmgqkpX279ZuKMITDEzq6cPec0Tdr19Q-dpfFNS9oLvtjYUYejrMpMctX4JEteUx5J4vg5Fh8qAvQlcplE3MdpIkCDUdfiUFpDeHkD_DDkGNEu7g7F"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="flex flex-col gap-0.5">
+<h3 class="font-label-md text-label-md text-on-surface line-clamp-1 group-hover:text-primary transition-colors">The Archivist's Grimoire</h3>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-[12px] text-on-surface-variant">26 Eps</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-md text-[12px] text-on-surface-variant">Madhouse</span>
+</div>
+</div>
+</div>
+<div class="group relative flex flex-col gap-stack-sm cursor-pointer transition-transform duration-300 hover:-translate-y-2">
+<div class="aspect-[2/3] rounded-xl overflow-hidden relative shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Abstract anime background representing a dreamscape with floating islands, giant gears, and rivers of starlight. A lone silhouette stands on the edge of a cliff looking out into the cosmos. The visual style is surreal and painterly, featuring vibrant gradients of orange, pink, and deep indigo, evoking a sense of exploration and existential wonder." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJERQgPIetSYDBW9sj5cRq-pNNfI7CwoXwV3K-3XY8_D25ErOfnm96-XYKq2pyjRkZYhOE5PZVdMjGc-nCgvQF0npvJ4G7rY5fZX3GOcSmJ6FEpmFm5s9pdMtUQkAK8jDB0sE27XwWhI71IJTw8wgDcR97DsddQ5tdmcBpjZaBQiHwZ-MTKl7hkC2CzpujmV6CnA6z1_WhmEI28TtHhW0_veRFyx2hqQeLikp5qktNEWUgqbe02BAzz9eBJd6LrkD9zXDCS8LePcmD"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="flex flex-col gap-0.5">
+<h3 class="font-label-md text-label-md text-on-surface line-clamp-1 group-hover:text-primary transition-colors">Beyond the Cog Horizon</h3>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-[12px] text-on-surface-variant">OVA</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-md text-[12px] text-on-surface-variant">Trigger</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button (Contextual) - For search within genre -->
+<button class="fixed right-6 bottom-24 z-50 bg-primary text-on-primary w-14 h-14 rounded-2xl flex items-center justify-center shadow-xl shadow-primary/20 active:scale-95 transition-transform">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter py-stack-sm pb-8 bg-surface/80 backdrop-blur-3xl border-t border-outline-variant/10 rounded-t-xl shadow-[0_-4px_20px_rgba(115,46,228,0.15)]">
+<div class="flex flex-col items-center justify-center text-on-surface-variant p-3 hover:text-primary transition-all active:scale-90 duration-150 cursor-pointer">
+<span class="material-symbols-outlined">home</span>
+</div>
+<!-- Active search because we are on a filtered/search result list -->
+<div class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full p-3 hover:text-primary transition-all active:scale-90 duration-150 cursor-pointer">
+<span class="material-symbols-outlined">search</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant p-3 hover:text-primary transition-all active:scale-90 duration-150 cursor-pointer">
+<span class="material-symbols-outlined">subscriptions</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant p-3 hover:text-primary transition-all active:scale-90 duration-150 cursor-pointer">
+<span class="material-symbols-outlined">person</span>
+</div>
+</nav>
+<script>
+        // Simple micro-interaction for cards
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('click', () => {
+                card.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    card.style.transform = 'translateY(-8px)';
+                }, 100);
+            });
+        });
+
+        // Filter button toggle state
+        const filterButtons = document.querySelectorAll('nav button');
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => {
+                    b.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+                    b.classList.add('bg-surface-variant/30', 'text-on-surface-variant');
+                });
+                btn.classList.remove('bg-surface-variant/30', 'text-on-surface-variant');
+                btn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+            });
+        });
+    </script>
+</body></html>

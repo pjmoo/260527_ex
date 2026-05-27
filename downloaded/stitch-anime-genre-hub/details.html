@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ANIXEL - Anime Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&amp;family=Climate+Crisis:wght@400;500;700&amp;family=Hanken+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, transparent 0%, rgba(11, 19, 38, 0.5) 60%, rgba(11, 19, 38, 1) 100%);
+        }
+        .accent-glow {
+            box-shadow: 0 0 20px rgba(115, 46, 228, 0.2);
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b1326;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2d3449;
+            border-radius: 10px;
+        }
+    </style>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-secondary-fixed": "#351000", "on-surface": "#b7eaff", "inverse-surface": "#b7eaff", "tertiary-fixed-dim": "#00dbe7", "on-tertiary": "#00363a", "error-container": "#93000a", primary: "#d5bbff", "surface-container-high": "#002e3b", "secondary-fixed": "#ffdbcc", "inverse-on-surface": "#003543", "on-primary-fixed": "#250a4c", "primary-container": "#735a9d", "on-secondary": "#561f00", "on-tertiary-fixed-variant": "#004f54", "inverse-primary": "#6a5294", "tertiary-container": "#007279", "secondary-fixed-dim": "#ffb693", "primary-fixed": "#ecdcff", "surface-variant": "#003a49", "on-primary-fixed-variant": "#523a7a", "primary-fixed-dim": "#d5bbff", secondary: "#ffb693", "on-error-container": "#ffdad6", "on-surface-variant": "#ccc3d8", tertiary: "#00dbe7", "on-secondary-fixed-variant": "#7a3000", "tertiary-fixed": "#74f5ff", "surface-bright": "#003f4f", background: "#00161d", "on-secondary-container": "#572000", "on-primary-container": "#eee0ff", outline: "#958da1", surface: "#00161d", "surface-container-lowest": "#001017", "secondary-container": "#fe6b00", "surface-dim": "#00161d", "on-error": "#690005", "on-tertiary-fixed": "#002022", "outline-variant": "#4a4455", "on-tertiary-container": "#8af6ff", error: "#ffb4ab", "on-primary": "#3b2362", "surface-container-low": "#001f28", "surface-container-highest": "#003a49", "surface-tint": "#d5bbff", "surface-container": "#00232d", "on-background": "#b7eaff"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {gutter: "16px", "stack-lg": "32px", "stack-md": "16px", "stack-sm": "8px", "container-padding": "24px", unit: "8px"}, fontFamily: {"headline-lg-mobile": ["Sora"], "label-md": ["Hanken Grotesk"], "body-lg": ["Hanken Grotesk"], "headline-lg": ["Sora"], "body-md": ["Hanken Grotesk"], "headline-md": ["Sora"], "display-lg": ["Sora"], headline: ["Arimo"], display: ["Arimo"], body: ["Climate Crisis"], label: ["Hanken Grotesk"]}, fontSize: {"headline-lg-mobile": ["28px", {lineHeight: "36px", fontWeight: "700"}], "label-md": ["14px", {lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600"}], "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}], "headline-lg": ["32px", {lineHeight: "40px", fontWeight: "700"}], "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "32px", fontWeight: "600"}], "display-lg": ["48px", {lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "800"}]}}}};</script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-outline-variant/20 shadow-sm flex justify-between items-center px-container-padding py-stack-sm w-full">
+<div class="flex items-center gap-stack-sm">
+<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 duration-200" data-icon="movie_filter">movie_filter</span>
+<span class="font-headline-md-mobile text-headline-md-mobile font-black tracking-tighter text-primary">ANIXEL</span>
+</div>
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-on-surface-variant hover:bg-surface-variant/30 transition-colors p-2 rounded-full cursor-pointer" data-icon="notifications">notifications</span>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-primary/30">
+<img alt="Profile" data-alt="A high-quality 3D avatar of a stylized anime character with silver hair and glowing violet eyes. The character is set against a dark, minimalist background with a slight purple rim light. The overall aesthetic is clean, modern, and cinematic, matching the dark mode interface of a premium entertainment platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ4c9uNsyBu5EOSaWwP7Y8rbBVSutUGWbu3RroF6m7ZexoFgKAxcGF-tRDUubsfkzw2t7QoPzub4j4Z8IQhc7hL0ZoUPni9siVbo-cc0aL6tQJCMZmIY9q0XNzhOWWewIyW9KvQntr1q10JraaIArvdnYcU0aeb0t7R1krJa1Q68FZuDDieuolK0GmppYcWLNbWgfl9l1ViR3W3SDBWikldz_oVkfs41zhok8vOQ68qa3jJQrtENv7UgbU0hJg45AzZo4xyStEdOPw"/>
+</div>
+</div>
+</header>
+<main class="relative">
+<!-- Hero Section -->
+<section class="relative w-full h-[618px] md:h-[707px]">
+<div class="absolute inset-0 w-full h-full overflow-hidden">
+<img alt="Cyberpunk Edge" class="w-full h-full object-cover" data-alt="A sprawling, futuristic cyberpunk cityscape at night, drenched in neon purple and electric orange lights. Towering skyscrapers with holographic advertisements pierce through a light mist. The atmosphere is cinematic and moody, featuring a deep contrast between the dark shadows and the vibrant primary purple accents of the ANIXEL brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGn-TYDJlEDqnKkb3H4cCA6mHdAYi1NBx23U4XOuh3xD1RURCGs8DPT3qtEGY6mUI0Bl5U_qI7Xrcvtqg9tnqmLdmtQw5ogkoX5r6sXN7sDSv0Zl7LV4O-ErfsyW4jWwZwIwvpOanNNcXs5szJhANUUARhkmtm5Rxtn5AWaqE8NZgQVMaFl_KX4aggb1IsBCV4Z5QtGxjMN8HV9kOAbsFSSvEcGVqK_LwOZ11IThKEIuuaZ4GC0oYHTYJoXuO33EybRP7uecTtXM-1"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<!-- Content Overlay on Hero -->
+<div class="absolute bottom-0 left-0 w-full px-container-padding pb-stack-lg flex flex-col items-start gap-stack-sm">
+<div class="flex gap-stack-sm mb-2">
+<span class="bg-secondary-container/20 text-secondary-fixed-dim px-3 py-1 rounded-full font-label-md text-label-md border border-secondary-container/40">NEW SEASON</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full font-label-md text-label-md border border-primary/30">TOP 10</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface leading-tight tracking-tight drop-shadow-2xl">ETERNAL VOID: NEXUS</h1>
+<div class="flex items-center gap-stack-md text-on-surface-variant font-label-md text-label-md">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-base" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>9.2 Rating</span>
+</div>
+<span>•</span>
+<span>2024</span>
+<span>•</span>
+<span>24 Episodes</span>
+<span>•</span>
+<span class="border border-outline-variant px-2 rounded">TV-MA</span>
+</div>
+</div>
+</section>
+<!-- Main Content Area -->
+<div class="px-container-padding flex flex-col gap-stack-lg -mt-4 relative z-10">
+<!-- Action Bar -->
+<div class="flex flex-wrap gap-stack-md">
+<button class="bg-secondary-container text-on-secondary-fixed font-headline-md px-8 py-3 rounded-xl flex items-center gap-2 hover:scale-105 transition-transform active:scale-95 accent-glow">
+<span class="material-symbols-outlined" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                    Watch Now
+                </button>
+<button class="glass-panel text-on-surface font-headline-md px-6 py-3 rounded-xl flex items-center gap-2 hover:bg-surface-variant/30 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+                    Add to Watchlist
+                </button>
+<button class="glass-panel text-on-surface p-3 rounded-xl hover:bg-surface-variant/30 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+<!-- Synopsis & Genres -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-stack-lg">
+<div class="lg:col-span-2 space-y-stack-md">
+<h2 class="font-headline-md text-headline-md text-primary">Synopsis</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        In the year 2142, the physical and digital realms have merged into a chaotic expanse known as the Nexus. Kael, a rogue memory-weaver, discovers a fractured fragment of the Eternal Void—an ancient intelligence capable of rewriting reality itself. As corporate syndicates and street-samurai close in, Kael must navigate the blurred lines of consciousness to prevent a systemic collapse of human memory.
+                    </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="bg-surface-variant/50 border border-outline-variant/30 px-4 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-primary/20 hover:text-primary transition-colors cursor-pointer">Cyberpunk</span>
+<span class="bg-surface-variant/50 border border-outline-variant/30 px-4 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-primary/20 hover:text-primary transition-colors cursor-pointer">Thriller</span>
+<span class="bg-surface-variant/50 border border-outline-variant/30 px-4 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-primary/20 hover:text-primary transition-colors cursor-pointer">Seinen</span>
+<span class="bg-surface-variant/50 border border-outline-variant/30 px-4 py-1.5 rounded-full font-label-md text-label-md text-on-surface-variant hover:bg-primary/20 hover:text-primary transition-colors cursor-pointer">Psychological</span>
+</div>
+</div>
+<div class="glass-panel p-stack-md rounded-2xl flex flex-col gap-4">
+<h3 class="font-headline-md text-headline-md text-secondary">Information</h3>
+<div class="space-y-3 font-label-md text-label-md">
+<div class="flex justify-between border-b border-outline-variant/10 pb-2">
+<span class="text-on-surface-variant">Studio</span>
+<span class="text-on-surface">Mappa Evolution</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/10 pb-2">
+<span class="text-on-surface-variant">Director</span>
+<span class="text-on-surface">Kenji Yamamoto</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/10 pb-2">
+<span class="text-on-surface-variant">Language</span>
+<span class="text-on-surface">JP, EN, ES, FR</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Status</span>
+<span class="text-tertiary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+                                Currently Airing
+                            </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Characters Section -->
+<section class="space-y-stack-md">
+<div class="flex justify-between items-end">
+<h2 class="font-headline-md text-headline-md text-on-surface">Characters</h2>
+<span class="text-primary font-label-md text-label-md cursor-pointer hover:underline">View All</span>
+</div>
+<div class="flex overflow-x-auto gap-stack-md pb-4 scroll-smooth -mx-container-padding px-container-padding no-scrollbar">
+<!-- Character Card 1 -->
+<div class="flex-shrink-0 w-32 md:w-40 group cursor-pointer">
+<div class="aspect-[1/1] rounded-2xl overflow-hidden border-2 border-transparent group-hover:border-primary transition-all mb-2">
+<img alt="Kael" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A portrait of a male anime character with messy dark hair and cybernetic ocular implants that glow with a faint cyan light. He wears a high-collared black tactical jacket. The art style is crisp and detailed, reminiscent of modern high-budget animation studios, with dramatic side-lighting and a dark, atmospheric background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQyoM8WDgujXaqNQ5TqBoI6rOmocueofubHlN2VXbvRiy88ZcnmkjqZvMEBgis5_ayH3XU-QhRn11U8do5CM3l7t9Vxek6a_LHs4F99NlKNS8Nz1o-SQgj9PagjeS2US3CvDdWPm75tH54uFcLUuN0KPRzH-OPCDZ4-oBlMjQWSZkfeGg6chX-oP5bX1FzysQCKraFcsXOfbH03g4nBfUxTZwYkJqEzSwm4orSkhSloFJpwQ0LImis2EGx_zH4FrEZAs5Hw5QFDdOQ"/>
+</div>
+<p class="font-label-md text-label-md text-on-surface text-center">Kael Vane</p>
+<p class="text-[10px] text-on-surface-variant text-center uppercase tracking-widest">Main Protagonist</p>
+</div>
+<!-- Character Card 2 -->
+<div class="flex-shrink-0 w-32 md:w-40 group cursor-pointer">
+<div class="aspect-[1/1] rounded-2xl overflow-hidden border-2 border-transparent group-hover:border-primary transition-all mb-2">
+<img alt="Lyra" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Close-up portrait of a female anime character with neon pink hair styled in a sharp bob. Her eyes are a deep electric blue, and she has subtle circuitry tattoos visible on her neck. The lighting is dominated by pink and purple neon hues, reflecting a high-tech cyberpunk environment. The illustration is sharp and cinematic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0YssNNTaQ6bzm0PPjO61KEtgoY3x55vXYeeENBdLkh-8uuaCpkqDdSAllsTI2j6BNtMn2qhx2OqnS28zraqecRSjMpVyIjtqltfyfZQQm-eIIq9ALvgw06qFGZ-joy8irj-JTyewDNUmqop0heZHidXk2MnoioyqnfekJ3GIaU_KgSnAE30dFnEfYAi0BFd5SttfckW-8jvkQ41ySKkmDgYRJI9sHv172QNj1kLN86bZEC4H8K-HLnQvrW47fkobOMd4vGdPRSMN2"/>
+</div>
+<p class="font-label-md text-label-md text-on-surface text-center">Lyra X</p>
+<p class="text-[10px] text-on-surface-variant text-center uppercase tracking-widest">Memory Weaver</p>
+</div>
+<!-- Character Card 3 -->
+<div class="flex-shrink-0 w-32 md:w-40 group cursor-pointer">
+<div class="aspect-[1/1] rounded-2xl overflow-hidden border-2 border-transparent group-hover:border-primary transition-all mb-2">
+<img alt="Boss" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A sinister-looking male anime character in a pristine white suit, standing in a dim, modern office with a view of a neon city. His hair is slicked back, and he wears dark, tinted glasses. The mood is cold and authoritative, using a color palette of whites, grays, and deep navy, punctuated by the city's neon reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACPeF0DbzI72uAly912b2olEWGd6zmIu8YT_6LWcs-ZoA7NpKipZEWEu9E1CIVo70l7ynDIiDZCgZ-xq-O23-i155ulPIeV0xTuQ0WtQV2hUu_TyVh45dpIJNaZd0COQCHW1xd_R6BxOvZMv3gpo8S1c9cCDJsD5q7NYMwg7Py7dlw8MS_jxJPwOsReMrm9DQajVuMfvwnOUvMtPQr8yK3LZr2mIxoCnAddxiGyHb5QwF3MYp8yoDAv0dxH0z20TMeFTiEXNaPAKuI"/>
+</div>
+<p class="font-label-md text-label-md text-on-surface text-center">Director Saito</p>
+<p class="text-[10px] text-on-surface-variant text-center uppercase tracking-widest">Antagonist</p>
+</div>
+<!-- Character Card 4 -->
+<div class="flex-shrink-0 w-32 md:w-40 group cursor-pointer">
+<div class="aspect-[1/1] rounded-2xl overflow-hidden border-2 border-transparent group-hover:border-primary transition-all mb-2">
+<img alt="Merc" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="An anime character dressed as a futuristic urban mercenary, wearing a hood and a glowing gas mask. Only their glowing yellow eyes are visible. The setting is a dark alleyway with rain falling, illuminated by yellow and teal neon signs. The style is gritty and detailed, with realistic textures and dramatic atmospheric lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8KGMarxwfAagUX3yUUn_P0Bv8CTnJNCAWX4vBiHH7sZFnKGLqKRshZ6cvwLFOeP_SarWoMukZDXbNRrzn_qO1c9uC-20XQTyVoMOFOne7stWdJSYCDD9VXWsLEn00VSMuOkO8sDcbFWhe80LRIWGZcpuaOty3lGZA5ldaI8VLixXweWSxWmAjnl6XkD6pcEXuOfhZsjfO5elKNbPdbAm-smkaSxv1nBs1ssfPYhhJOAFufdIL9KHQ3y9bb-SowNW6Qc-5UZG_30ux"/>
+</div>
+<p class="font-label-md text-label-md text-on-surface text-center">Ghost-7</p>
+<p class="text-[10px] text-on-surface-variant text-center uppercase tracking-widest">Supporting</p>
+</div>
+</div>
+</section>
+<!-- Trailers & Media -->
+<section class="space-y-stack-md">
+<h2 class="font-headline-md text-headline-md text-on-surface">Trailers &amp; Media</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div class="relative group cursor-pointer overflow-hidden rounded-2xl aspect-video">
+<img alt="Trailer 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A cinematic wide shot of a futuristic motorcycle racing through a neon-lit tunnel, creating streaks of blue and purple light. The scene is high-octane and dynamic, capturing a sense of extreme speed. The lighting is electric and vibrant, perfectly matching the cinematic 'Electric Cinematic' theme of the ANIXEL platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz8iW6kiIBP6GHcKVu1p8sb2rqhFFVWQCe72FiIdqTEPK54QYUzZdmyQfwDLub6HvHpWyWUXgUdZgxT79TAWs7ejoyVtLGSLcECBhRkrHaTABfmROu1DINChngXOyUeDaIMnqgakhF484GkUCriRfHRYPWmxJ6treckd_q0qUAh7oayFuft5mjFsPABpBKjz78O5fbeeT5WRmuqbYe8GBYza4qsqiNJwAQe5nOvVpPvQBEJzBV0dM9OmkAfyUbnvCC7I8OBGukhUQG"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/20 transition-all">
+<div class="w-14 h-14 rounded-full bg-primary/80 backdrop-blur flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 font-label-md text-label-md bg-black/60 px-3 py-1 rounded backdrop-blur">
+                            Official Trailer #1
+                        </div>
+</div>
+<div class="relative group cursor-pointer overflow-hidden rounded-2xl aspect-video">
+<img alt="Teaser" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A dramatic close-up of a digital landscape dissolving into data particles of glowing orange and white. The background is a deep, dark navy, suggesting a digital void. The visual style is abstract and sophisticated, representing high-end sci-fi animation. The image is rich in texture and particle effects, providing a sense of depth and mystery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ1syzpFANL3EFez7P71ezDYuDhCX7U7uDl9j3C6No1TlHZKbm2nIhwE1U7E3d4QQIDmpPAlqMe7qBmu6Mr0hMrB-Y9T-sJ1jI506gZxjdcNyII87u3yZIVIyfzfrZhBzF1x-8bEOnb3Y-LliQACAJxKIpiV8Bk8heGuqGuHp3QwlQZbKwJXSnn4gxD1oyKUe6lJhTWV9qFKsDKOmvTmphkCHBlgg6Q0DUJ0bSwJ8ZGPb-SeKE3406oKjpiXsv0eYMP9xDb8L0ZjUQ"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/20 transition-all">
+<div class="w-14 h-14 rounded-full bg-secondary-container/80 backdrop-blur flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 font-label-md text-label-md bg-black/60 px-3 py-1 rounded backdrop-blur">
+                            Season Teaser
+                        </div>
+</div>
+</div>
+</section>
+<!-- Recommendations -->
+<section class="space-y-stack-md">
+<h2 class="font-headline-md text-headline-md text-on-surface">Similar Recommendations</h2>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-stack-md">
+<!-- Rec Card 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[2/3] rounded-xl overflow-hidden relative mb-2">
+<img alt="Rec 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A professional anime poster featuring a mysterious girl with long blue hair standing in front of a giant moon. The color scheme is cold and ethereal, with shades of silver, dark blue, and soft white. The art style is clean and modern, with a high-end cinematic feel and a focus on atmospheric lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlvaNZ7_nEFEKbP_Fn9QkGOGd1yjJLM4raUhi56LjPx5aS7PX23M39uvpuHEGgiqJPWkriewJZe_d5JzKgZ0v2G3ivElsNMU9idH8SAR9afMxSlFlgq61jaqI7OxqxlGAO_Vc0MVF3R77VUNhooUwiXVE5x5gnbZTTKfHoacHddw8nOa8DEvx7TAoPtt_ItRp3o_Ajh5cDOZim8ozBL-hVAJSwaTbVn5bjs-EZdecX_cxSQ5N89Ck0f6m17VDhOcUt7XKa_kjOay8z"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3">
+<span class="bg-primary text-on-primary text-[10px] font-bold px-2 py-0.5 rounded-full w-fit">9.0</span>
+</div>
+</div>
+<p class="font-label-md text-label-md text-on-surface line-clamp-1">Lunar Chronicles</p>
+<p class="text-[12px] text-on-surface-variant">Fantasy • Sci-Fi</p>
+</div>
+<!-- Rec Card 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[2/3] rounded-xl overflow-hidden relative mb-2">
+<img alt="Rec 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="An action-packed anime poster showing a group of diverse characters in tactical gear running through a ruined urban environment. The sky is a dramatic sunset orange and deep purple. The visual style is gritty yet vibrant, with high-detail character designs and explosive atmospheric effects, matching the high-octane brand energy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7t3Y5ibq3hEX9Ky91xN2i3q3giaUFVrDIpo8RHO1sQkzhceF1VMrszT_0KL5q235SgBhaROfenFbfYC0IdjdoNICXNBilbqvgyONzI5-Rjv_loQP9NCxxiI0E3iydlsuT4VPXY189aMP-gSH7i3ZQrWgrk6ohMR81FNDz2iL7TUtVA78jl8tr0RQ2LILWVfjqHUAJaga4qBVTO9UYIa3b2mI6Wovn4cRJTthguLkMoh7AjmK3coYr7w3ufRKsLgPHNIuXZxLptY1U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3">
+<span class="bg-primary text-on-primary text-[10px] font-bold px-2 py-0.5 rounded-full w-fit">8.8</span>
+</div>
+</div>
+<p class="font-label-md text-label-md text-on-surface line-clamp-1">Vanguard Zero</p>
+<p class="text-[12px] text-on-surface-variant">Action • Mecha</p>
+</div>
+<!-- Rec Card 3 -->
+<div class="group cursor-pointer hidden sm:block">
+<div class="aspect-[2/3] rounded-xl overflow-hidden relative mb-2">
+<img alt="Rec 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A stylized anime-style illustration of a hacker girl in a dark room illuminated by many floating digital screens. Her eyes glow with the reflections of complex code and data charts. The predominant colors are cyan, neon purple, and deep black, creating a high-tech, immersive atmosphere characteristic of a modern cyber-thriller anime." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzBk9Uqa4BUZficpjGKAqrKRJQACuNYuph4CJMUOo6D0Yx9jcKe-u1RPAfenzX9Yg1VaGsrCwFiLsTZgUO80cTpAWJQV1LQkniLITKRIjPWZbzdcKdWArlqhAHUivTQaS9jniUcyKpY2uvMDCCzz6Q2kSXFzuq0NHnSltFz3nFmKL1q206z7FxqFcgpws_qX7iPLWOdRLzajtqJv98EZIcUJC_eVMfyFOf9Rdz3-_lKqsKcF7gIYhXOoar13Ae1n9u1T6csXe9Z2HY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3">
+<span class="bg-primary text-on-primary text-[10px] font-bold px-2 py-0.5 rounded-full w-fit">8.5</span>
+</div>
+</div>
+<p class="font-label-md text-label-md text-on-surface line-clamp-1">Data Soul</p>
+<p class="text-[12px] text-on-surface-variant">Cybernetic • Mystery</p>
+</div>
+<!-- Rec Card 4 -->
+<div class="group cursor-pointer hidden md:block">
+<div class="aspect-[2/3] rounded-xl overflow-hidden relative mb-2">
+<img alt="Rec 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="An abstract and colorful anime-style artwork depicting an explosion of paint and geometric shapes against a dark starry sky. The colors are incredibly vibrant, featuring shocking pinks, oranges, and purples. The composition is dynamic and expressive, capturing the 'Electric Cinematic' energy of a high-end anime production." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu9dkemwDcghxV8z6hKd38HrTYdAw-eN13RI_AKL5Km_xefsrIG9CjHr8sg7WVG9P70tLbz2ijzoc-M9PeBzPdlKCTnFTiqMie5XNh_mcL158-oG-iyP4F9iJF2BcZTQZLDy_pdLBGgVY9eu8_YMS5RZcq9StNisOsbtq2QLfwZnTPA-ajDn_mHP9VQ9VFMj7ETTq4JXBMPLs6AM1Nx3vbtFd5vIAhYk1SngTuq5IhblQK__maemNv0suOOuFWWCyNrnn2HOhVGnat"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3">
+<span class="bg-primary text-on-primary text-[10px] font-bold px-2 py-0.5 rounded-full w-fit">9.4</span>
+</div>
+</div>
+<p class="font-label-md text-label-md text-on-surface line-clamp-1">Starlight Echo</p>
+<p class="text-[12px] text-on-surface-variant">Music • Drama</p>
+</div>
+<!-- Rec Card 5 -->
+<div class="group cursor-pointer hidden lg:block">
+<div class="aspect-[2/3] rounded-xl overflow-hidden relative mb-2">
+<img alt="Rec 5" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A moody anime poster of a lone warrior standing in a field of red spider lilies under a dark, stormy sky. The scene is illuminated by occasional lightning flashes. The art style is traditional yet refined, with deep blacks and vibrant red accents, creating a sombre yet striking visual narrative." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNZ2dDHPXPzMRa-g7eZcaYTNCNhzXx_3hWgeeAvaM6Il8tb47G5XRHXAuJMjJb2JeaOlr3QWGdrBwTckUuFMzdAL-P2RwycVh-SPbHeRLWYP6jN3K3E6xB_FiqjMJKYH4mCYYH3MY-nXxBnt_qHNxptJy5QPT0clSJ1Em3Xgu8odfQ_9Y4j1UbqhbR8viD3MeAjcdVwvtRfkEzyUdzFGkQ3P1epCdThC6CtwGXigdunjFj9mtFlNLAinmalrV3qGRzLSb85QWm1L_p"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3">
+<span class="bg-primary text-on-primary text-[10px] font-bold px-2 py-0.5 rounded-full w-fit">8.7</span>
+</div>
+</div>
+<p class="font-label-md text-label-md text-on-surface line-clamp-1">Crimson Path</p>
+<p class="text-[12px] text-on-surface-variant">Samurai • Horror</p>
+</div>
+<!-- Rec Card 6 -->
+<div class="group cursor-pointer hidden lg:block">
+<div class="aspect-[2/3] rounded-xl overflow-hidden relative mb-2">
+<img alt="Rec 6" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A futuristic anime cityscape showing a bright, sun-drenched metropolis with flying vehicles and lush vertical gardens. The mood is optimistic and bright, featuring a palette of whites, teals, and light oranges. The visual style is high-definition and modern, showcasing a utopian sci-fi setting with intricate architectural details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL8S-DkRB5XJ7EaTlBnuVikg_gmfDO_OiYzl3euZ065eQEmFo_cKY1OE-PUGAh6-8K6B0pz8-mRTz4UYxpHpufWxckjXsOjPBJZYtBjsx_tQiI7COCPKvNRnk-gnnfDPBwnuohJRSMAQWU-KsI03ZIA8Ro-yh1HoS1VLWoN20IsUzWngpnlGQhK0stME2UOp-Ph5CHJuutmn36SlcLHFkOYt8EJFStQxU2mX2KYUGofmWWGlunPhLd1OW2cIH64yQwNcH8w9TI03t2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3">
+<span class="bg-primary text-on-primary text-[10px] font-bold px-2 py-0.5 rounded-full w-fit">8.3</span>
+</div>
+</div>
+<p class="font-label-md text-label-md text-on-surface line-clamp-1">Neo Genesis</p>
+<p class="text-[12px] text-on-surface-variant">Adventure • Sci-Fi</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter py-stack-sm pb-8 bg-surface/80 backdrop-blur-3xl border-t border-outline-variant/10 shadow-[0_-4px_20px_rgba(115,46,228,0.15)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 hover:text-primary transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 hover:text-primary transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full p-3 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="subscriptions" style="font-variation-settings: 'FILL' 1;">subscriptions</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 hover:text-primary transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</a>
+</nav>
+<script>
+        // Micro-interaction for the 'Add to Watchlist' button
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                if (this.innerText.includes('Add to Watchlist')) {
+                    const icon = this.querySelector('.material-symbols-outlined');
+                    if (icon.innerText === 'bookmark') {
+                        icon.innerText = 'bookmark_added';
+                        icon.style.fontVariationSettings = "'FILL' 1";
+                        this.classList.add('text-primary');
+                        this.querySelector('span:last-child').innerText = 'In Watchlist';
+                    } else {
+                        icon.innerText = 'bookmark';
+                        icon.style.fontVariationSettings = "'FILL' 0";
+                        this.classList.remove('text-primary');
+                        this.querySelector('span:last-child').innerText = 'Add to Watchlist';
+                    }
+                }
+            });
+        });
+
+        // Simple scroll reveal effect for sections
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

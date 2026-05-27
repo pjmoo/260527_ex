@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ANIXEL - Immersive Anime Discovery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&amp;family=Climate+Crisis:wght@400;500;700&amp;family=Hanken+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-gradient {
+            background: linear-gradient(0deg, #0b1326 0%, rgba(11, 19, 38, 0.5) 50%, rgba(11, 19, 38, 0) 100%);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-secondary-fixed": "#351000", "on-surface": "#b7eaff", "inverse-surface": "#b7eaff", "tertiary-fixed-dim": "#00dbe7", "on-tertiary": "#00363a", "error-container": "#93000a", primary: "#d5bbff", "surface-container-high": "#002e3b", "secondary-fixed": "#ffdbcc", "inverse-on-surface": "#003543", "on-primary-fixed": "#250a4c", "primary-container": "#735a9d", "on-secondary": "#561f00", "on-tertiary-fixed-variant": "#004f54", "inverse-primary": "#6a5294", "tertiary-container": "#007279", "secondary-fixed-dim": "#ffb693", "primary-fixed": "#ecdcff", "surface-variant": "#003a49", "on-primary-fixed-variant": "#523a7a", "primary-fixed-dim": "#d5bbff", secondary: "#ffb693", "on-error-container": "#ffdad6", "on-surface-variant": "#ccc3d8", tertiary: "#00dbe7", "on-secondary-fixed-variant": "#7a3000", "tertiary-fixed": "#74f5ff", "surface-bright": "#003f4f", background: "#00161d", "on-secondary-container": "#572000", "on-primary-container": "#eee0ff", outline: "#958da1", surface: "#00161d", "surface-container-lowest": "#001017", "secondary-container": "#fe6b00", "surface-dim": "#00161d", "on-error": "#690005", "on-tertiary-fixed": "#002022", "outline-variant": "#4a4455", "on-tertiary-container": "#8af6ff", error: "#ffb4ab", "on-primary": "#3b2362", "surface-container-low": "#001f28", "surface-container-highest": "#003a49", "surface-tint": "#d5bbff", "surface-container": "#00232d", "on-background": "#b7eaff"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {gutter: "16px", "stack-lg": "32px", "stack-md": "16px", "stack-sm": "8px", "container-padding": "24px", unit: "8px"}, fontFamily: {"headline-lg-mobile": ["Sora"], "label-md": ["Hanken Grotesk"], "body-lg": ["Hanken Grotesk"], "headline-lg": ["Sora"], "body-md": ["Hanken Grotesk"], "headline-md": ["Sora"], "display-lg": ["Sora"], headline: ["Arimo"], display: ["Arimo"], body: ["Climate Crisis"], label: ["Hanken Grotesk"]}, fontSize: {"headline-lg-mobile": ["28px", {lineHeight: "36px", fontWeight: "700"}], "label-md": ["14px", {lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600"}], "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}], "headline-lg": ["32px", {lineHeight: "40px", fontWeight: "700"}], "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "32px", fontWeight: "600"}], "display-lg": ["48px", {lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "800"}]}}}};</script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-outline-variant/20 shadow-sm flex justify-between items-center px-container-padding py-stack-sm w-full">
+<div class="flex items-center gap-3 active:scale-95 duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-primary" style="font-size: 28px;">movie_filter</span>
+<h1 class="font-headline-md-mobile text-headline-md-mobile font-black tracking-tighter text-primary">ANIXEL</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-surface-variant/30 transition-colors rounded-full active:scale-95">search</button>
+<button class="material-symbols-outlined text-primary p-2 hover:bg-surface-variant/30 transition-colors rounded-full active:scale-95">notifications</button>
+</div>
+</header>
+<main class="pb-32">
+<!-- Hero Section -->
+<section class="relative h-[751px] w-full flex items-end overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A cinematic, high-definition anime-style illustration of a futuristic neo-Tokyo cityscape at sunset. The scene is dominated by vibrant purples and deep oranges, with neon signs glowing against a twilight sky. In the foreground, a mysterious protagonist with flowing hair stands on a skyscraper's edge, looking out over the electric sprawl. The lighting is dramatic, with high-contrast shadows and a soft, ethereal glow that captures a modern, cinematic theater aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6-nuZ3wrj8-XhvGV28MNBjUH64Z21bpE0ZFuE5zTHnY376Rn8p4Lq_dySZyiEqgqxDGEt5ZztMjlFc0XZg6Vlu87Nviop5D-GE0yqlFAYmMD1FCulGY97f4mGZOt6urEMlIcpIEStIKCSApwgx1Nq-5zak7caDWH0sazwdwYUOgvLN74-XrSW401607cUePdJZHWhwy-zpSIjpz58hppx_oqetahpY2tUkdyKEVUsIkfVA86UCBmosLPqpSp6PH9mn1KLmxDuaYnP"/>
+<div class="absolute inset-0 hero-gradient"></div>
+<div class="relative z-10 px-container-padding pb-stack-lg w-full max-w-4xl">
+<div class="flex items-center gap-2 mb-stack-sm">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-md text-label-md">LIVE</span>
+<span class="text-tertiary font-label-md text-label-md uppercase tracking-widest">Action • Sci-Fi • Cyberpunk</span>
+</div>
+<h2 class="font-display-lg text-display-lg mb-stack-sm leading-none text-white">NEON GENESIS: RETRIBUTION</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-md max-w-2xl">
+                    In the year 2088, humanity's last hope rests in the hands of a fractured group of pilots fighting against celestial entities that bleed starlight.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-xl flex items-center gap-2 hover:scale-105 active:scale-95 transition-all font-headline-md text-headline-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        WATCH NOW
+                    </button>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-xl flex items-center gap-2 hover:bg-white/20 active:scale-95 transition-all font-headline-md text-headline-md">
+<span class="material-symbols-outlined">add</span>
+                        MY LIST
+                    </button>
+</div>
+</div>
+</section>
+<!-- Trending Now -->
+<section class="mt-stack-lg">
+<div class="px-container-padding flex justify-between items-center mb-stack-md">
+<h3 class="font-headline-md text-headline-md text-primary flex items-center gap-2">
+<span class="material-symbols-outlined">trending_up</span> Trending Now
+                </h3>
+<button class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors">VIEW ALL</button>
+</div>
+<div class="flex overflow-x-auto hide-scrollbar gap-gutter px-container-padding pb-stack-sm">
+<!-- Trending Cards -->
+<div class="flex-none w-[200px] group cursor-pointer">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden mb-2 glass-card transition-transform group-hover:scale-105 duration-300">
+<img class="w-full h-full object-cover" data-alt="Dynamic anime character portrait with intense purple electric sparks flying around them. The character has sharp features and glowing cyan eyes, set against a dark, moody background with subtle orange highlights. The visual style is high-energy, electric cinematic with sharp geometry and translucent layering typical of premium action anime series." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcLjk5vwKT6AhGJ5BTeryidTK7lVbMVNk6E4JtW--OpFjss5LZIIqQKWH_iL33psE0o9zT9rbt4dhrEycT69a_rQ8bmLML7FA1q7hVvFazk58N6SrBP5o2YCaA-CIqEGd4a70ZFzG2HDC0948l3xI0mxnSm827o97yQScH6YfBFtH-vyPzLIVT0LaQnvaaPMqv2GLnt6FPhSTtEy5eJGklRepdBsn0n-UdOMv6Z7ro_bzpkmqcYRrbKe5-p1E6NRZqcv8IEpgqBh_c"/>
+<div class="absolute top-2 right-2 bg-black/60 backdrop-blur-md px-2 py-1 rounded text-primary font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> 9.2
+                        </div>
+</div>
+<h4 class="font-label-md text-label-md line-clamp-1 group-hover:text-secondary transition-colors">STORM BREAKER</h4>
+</div>
+<!-- Repeat cards for visual flow -->
+<div class="flex-none w-[200px] group cursor-pointer">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden mb-2 glass-card transition-transform group-hover:scale-105 duration-300">
+<img class="w-full h-full object-cover" data-alt="A serene yet powerful anime landscape featuring floating islands and cascading waterfalls under a giant glowing moon. The atmosphere is sophisticated with deep indigo shadows and vibrant purple floral accents. The lighting is soft and ambient, creating a glassmorphic glow that suggests the environment itself is emitting a magical light in a cinematic dark-mode setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV8WIeglHoRnhWMhHb7fqvA6vawuBDyT6_nDZKg9gE54QNJuo0P_XnxtsGQ_k3edWbPRFblxkxfWzrfvxFm9hRQqm6Up62W8gWhLtROyuFKNEKcbDO0u4AAK9uJPtrFdm5JQyTAJ_V6Xd9Lb-rj4aMxUURiDcekFTQ4MVCQQCaGxzVpYLnXsWHQfyTPiIua1YhQtL8a7KB9w4NtY67HjRuX_3Bu2ZuEH6rUvPcYYdvvx3Lq8-Tq_d1Yc0phkEzPN8MJAwXh1KFzaJc"/>
+<div class="absolute top-2 right-2 bg-black/60 backdrop-blur-md px-2 py-1 rounded text-primary font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> 8.8
+                        </div>
+</div>
+<h4 class="font-label-md text-label-md line-clamp-1 group-hover:text-secondary transition-colors">FLOATING WORLD</h4>
+</div>
+<div class="flex-none w-[200px] group cursor-pointer">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden mb-2 glass-card transition-transform group-hover:scale-105 duration-300">
+<img class="w-full h-full object-cover" data-alt="Futuristic anime mecha pilot inside a cockpit filled with holographic interfaces and glowing primary purple controls. The pilot wears a sleek white suit that reflects the orange and purple neon lights of the dashboard. The style is sophisticated cyberpunk with a high-octane accent palette and deep immersive backgrounds typical of a high-energy theater experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxPODAFr39371cRAVBUeo1RG5Mc-sH0ALa31NWLkC1DMzTs_hmrA-jnKSUp1jxv8t_FNMp_rFW8rtY9QQUFgOyUKTCldFyueIfYE5aszTr0sKI3B5hSZrYDgVUSHRRr6xLLzJVmR3G1zLnrGO7FB5LLkMtwQiLH4lvpvLYewcsh978VvAmrTbalgPupwbybg_JIlRHwFOg67zALh6uJ5qXHnErzZy60KRocU1oVwDxzbJDQDdgvQS7D7CV5I9JXMKYnA-wAQReirxi"/>
+<div class="absolute top-2 right-2 bg-black/60 backdrop-blur-md px-2 py-1 rounded text-primary font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> 9.5
+                        </div>
+</div>
+<h4 class="font-label-md text-label-md line-clamp-1 group-hover:text-secondary transition-colors">OMEGA UNIT</h4>
+</div>
+<div class="flex-none w-[200px] group cursor-pointer">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden mb-2 glass-card transition-transform group-hover:scale-105 duration-300">
+<img class="w-full h-full object-cover" data-alt="Close-up of a katana blade reflecting a burning orange sunset and a silhouette of a samurai. The artwork uses rich, saturated colors with deep purple shadows and vibrant orange highlights. The composition is cinematic and bold, emphasizing the sharp geometry and the 'Electric Cinematic' personality of the design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuQ8oruute64_vNax22C_-3yAltDpBR89zOG0M4jIP1Wudc9KncBIxPO5rP1Sj6v7n854D1Iuuwd_FmSsD71CQbwY_gKPBdYX_kWnqYBwwdq8Nvukk82Lw7tj67lNa7TtHlxC56t7HYBzSW4b_q9h2-mRF9MjmycgOvf9wYn4bcnG2Cx3rE1_zIPbPIrax-E79iSLujDeYxZpEgFL6-0OY6S9c0eZJMOnY_G6cuNYv_KBJbFHOB4S0RfQVFWYzx3B141HycrY3JEMt"/>
+<div class="absolute top-2 right-2 bg-black/60 backdrop-blur-md px-2 py-1 rounded text-primary font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> 8.4
+                        </div>
+</div>
+<h4 class="font-label-md text-label-md line-clamp-1 group-hover:text-secondary transition-colors">CRIMSON EDGE</h4>
+</div>
+<div class="flex-none w-[200px] group cursor-pointer">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden mb-2 glass-card transition-transform group-hover:scale-105 duration-300">
+<img class="w-full h-full object-cover" data-alt="Ethereal anime forest scene with glowing mushrooms and tiny forest spirits floating in the air. The scene is dominated by a cool palette of blues and teals, with primary purple accents providing a magical warmth. The visual depth is achieved through layering and soft ambient glows, making the artwork the center stage of the dark-themed UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSnta3FlNDP0tzuzTnpxIFMXn0tMreAuF5xZs9sC0_WOyhd1vQ8bZ9jNHswG2oOZ7WLdzTzZr8IR4MI2q32PRJNcEQMwmofSt8Tn1WAC33HL4eAUwRbEHruVtzujfr42J_RBygP_S4XfykdgDATl6V-TLwYParyOn-Xe6a-nfgcY6GPkB02MyPZ8LhGACUu4_-wSLVQQ80JDylPrCsS6KCpJsE2HEeSSBLxSZy88U_heTwhIkwSDP3xkCeU6sO8RjZHtxZvzM7KUHP"/>
+<div class="absolute top-2 right-2 bg-black/60 backdrop-blur-md px-2 py-1 rounded text-primary font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span> 9.0
+                        </div>
+</div>
+<h4 class="font-label-md text-label-md line-clamp-1 group-hover:text-secondary transition-colors">SPIRIT BOUND</h4>
+</div>
+</div>
+</section>
+<!-- Seasonal Hits (Bento Grid Style) -->
+<section class="mt-stack-lg px-container-padding">
+<h3 class="font-headline-md text-headline-md text-secondary mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined">auto_awesome</span> Seasonal Hits
+            </h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+<div class="col-span-2 row-span-2 relative rounded-2xl overflow-hidden group cursor-pointer border border-outline-variant/10 shadow-lg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Traditional Japanese temple during a blizzard, rendered in a striking anime style with deep indigo night sky and bright orange lantern light reflecting on the snow. High-contrast lighting creates a dramatic theatrical atmosphere. The artwork feels immersive and takes center stage, framed by a subtle glass-like border of the UI card." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrnkSldtkagIeMoDmhMgkA7OAmKuKQrXoJluj8Q9gFaclaXT25R9ShTvGqgWzXi4THLvvM_JGOdjI-P4JlZDnBHqZtcnA3_2v61Qn05opMASTeOmVLRp71MDsBI70LFt5RnKznOxDpkTXSbqMJThMFzTXxoD2-k_GSDrg5z9kiOnYQZNfS6AQTvuEGHej6xop7iITw3c-IlmnANzoGkiRbuAiHqNPSWuI8covO_BAc3KA04BFFsdG694qx3XRB7L4T2HLkRm2xk4u9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-0 p-6">
+<span class="bg-primary text-on-primary px-2 py-0.5 rounded text-[10px] font-bold mb-2 inline-block">EP 24 READY</span>
+<h4 class="font-headline-md text-headline-md text-white">YUKI NO KUNI</h4>
+<p class="text-on-surface-variant text-sm line-clamp-1">Fantasy • Mystery • Drama</p>
+</div>
+</div>
+<div class="relative rounded-2xl overflow-hidden group cursor-pointer border border-outline-variant/10">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="Minimalist anime street scene at night under a heavy rainstorm. Neon purple and cyan signs reflect in the puddles on the ground. The mood is serene and technologically advanced, echoing the 'Electric Cinematic' vibe of the app with deep immersive blacks and vibrant neon accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHUb8rUp7MUl1Pwk6E5QMfLem07ARNe2BS4N6uapl1OC0l1aFJIVwVsDyxYAGerfWVXD0Yn4geC8FyUChCmUiMvH78hSsfL03cHsAzswW8NjTG-jgg-c5misHVZls7nyD3zxRVvMAdAZK-SqiziPIy2mynC-iiaypgWBdAL2q2ZElZhWJyNker6lCBxB8xE0yX6-h0Zp1LyJ047uvRJtlTFMTgLw1nBW1rrCHQj76zX16EOHaYB54pfpayNSxeb_0H4_JagaN-YYPN"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+<div class="absolute bottom-4 left-4">
+<p class="font-label-md text-label-md text-white">CITY RAIN</p>
+</div>
+</div>
+<div class="relative rounded-2xl overflow-hidden group cursor-pointer border border-outline-variant/10">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="Anime-style close-up of a high-tech robotic eye glowing with primary purple data streams. The intricate mechanical details are sharp and futuristic, set against a dark slate background. This piece captures the otaku spirit through sharp geometry and sophisticated dark-mode layering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZGe3dPvAJvxAqepMTjiwFT9k04OEV69fD4uUXWfics9Chf38OQIUMoap7SmbwdgMvZBB4hN6JwkPFqKHJ_0s1eaX5t15uPNW2afm_hC834rO6m7xb29LNobJwhpVVFcopQZ-9SmFPWEfrRLv1hsD9L_CJRZQbjLbl9K8LsarvQZdTEfVdr34aoaUV0TSzchdE9ARTGx1eei2BeC0YL8qgZWt5-eZlCpuxfHmPOvdA23mz4YESzYHe01wpLvwBogygk9d3QLR-9K1H"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+<div class="absolute bottom-4 left-4">
+<p class="font-label-md text-label-md text-white">SIGNAL LOSS</p>
+</div>
+</div>
+<div class="col-span-2 relative rounded-2xl overflow-hidden group cursor-pointer border border-outline-variant/10 h-[200px]">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="Panoramic anime view of a lush coastal town with colorful houses built into a cliffside, overlooking a sparkling teal sea. The art style is vibrant and playful, with bright sunlight and soft clouds. This 'Stage' background is designed to pop against the dark UI elements of the application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAagNaYIZK146JWDUuLRNRgbrbzc4EuAI6z0-pPek_SAmxGkl6vCdkiohEWsUSMPbsLb9ZoisX6BVRcEhECQjpSUR_g89ZeRxpc7izk5opJnL1-L2L_zaMRs_PZq9Mh60L4ogHJVwAk-xB2DrxRWdnjMLd0bBk0sHF3K_1ejM3tVwp2p-nyAeu4XepHyr6mv5IfoFcMD5yLJt0DFbtHUnFY5U_L3AChQGfVLaXV-ZlRb_z8h_fhYgShD0VJh1QqU0zRQu8C4aEStwWn"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<p class="font-label-md text-label-md text-white">SEA BREEZE CHRONICLES</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Recommended For You -->
+<section class="mt-stack-lg mb-stack-lg">
+<div class="px-container-padding flex justify-between items-center mb-stack-md">
+<h3 class="font-headline-md text-headline-md text-tertiary flex items-center gap-2">
+<span class="material-symbols-outlined">favorite</span> Recommended For You
+                </h3>
+</div>
+<div class="flex overflow-x-auto hide-scrollbar gap-gutter px-container-padding pb-stack-sm">
+<!-- Genre Chips -->
+<div class="flex-none w-[280px] bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/10 group cursor-pointer">
+<div class="h-40 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Anime scene of two characters sharing a quiet moment on a train during sunset. The cabin is filled with warm, golden light and long shadows. The color palette emphasizes vibrant oranges and deep purples, perfectly aligning with the app's electric cinematic theme and focus on high-quality artwork." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9LDVC5BM3n7P_H5Lp-7mSIs57V18BGfaWLO9QJ37R1agPEuvy7lqez1xE8ipY28hOYak7rB8FNoliJnENzpUxcT6HXWtpSusl4gWbcvbX1hx0m3scdlaIamoaoiyrCiFol2Bdce600Hn7mKOr0iyvOWdlMzmwREilX1sCCiGxBWF-bbPL6FsDnRZ0R8Px9Ix_zY1ZNw_K2HW2oEZCETMcg25V6HiOvbpLNTSHIWTGFdmjbPCHkYxdFG1tfPcU4cPOWIIFzsbJxtjF"/>
+</div>
+<div class="p-4">
+<div class="flex gap-2 mb-2">
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-md text-[10px]">98% MATCH</span>
+<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-md text-[10px]">TOP RATED</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-white mb-1">STATION 5</h4>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-3">A nostalgic journey through time and memory on the trans-galactic railroad.</p>
+<div class="flex justify-between items-center">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full border border-background bg-secondary"></div>
+<div class="w-6 h-6 rounded-full border border-background bg-tertiary"></div>
+<div class="w-6 h-6 rounded-full border border-background bg-primary"></div>
+</div>
+<span class="text-xs text-on-surface-variant">42k watching</span>
+</div>
+</div>
+</div>
+<div class="flex-none w-[280px] bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/10 group cursor-pointer">
+<div class="h-40 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Dynamic anime action shot of a martial arts duel in a bamboo forest at night. Glow-in-the-dark paint on the fighters' clothes creates light trails as they move. The lighting is dominated by deep blues and vibrant orange sparks, creating a sophisticated yet playful atmosphere that highlights the 'otaku' spirit of the UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkgr0keQefZaqnAG5In_mQqHbsvqGnIM568NHRuwFtVuzaYSEAbJDgtvsczlhYaN275hoqIaT34BZXENd8yscrf9rXTqCjZ1ypvVPo4IpUG-IPQSbuKQVwhyXoMARJ0z_h2hwloagknUBG3TsEvaXeJhxwzbvoUKHKK_TxKPpU6ELdolRi6pRv8Yw7oQnkoE1SicwAKRqXlfEEgUfGpoqPBzvedTiQ41VfjbkbiN0b5FPiObV4-WkJvlBeAUEhX6Xc30CNw609xQpZ"/>
+</div>
+<div class="p-4">
+<div class="flex gap-2 mb-2">
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-md text-[10px]">95% MATCH</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-white mb-1">SHADOW BLADE</h4>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-3">Master the art of the invisible strike in this high-octane martial arts epic.</p>
+<div class="flex justify-between items-center">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full border border-background bg-error"></div>
+<div class="w-6 h-6 rounded-full border border-background bg-primary"></div>
+</div>
+<span class="text-xs text-on-surface-variant">15k watching</span>
+</div>
+</div>
+</div>
+<div class="flex-none w-[280px] bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/10 group cursor-pointer">
+<div class="h-40 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Anime interior of a futuristic café where robots and humans interact. The lighting is warm and inviting with glassmorphic furniture and holographic menus. The overall palette uses soft pastels with vibrant purple and orange highlights to maintain a modern corporate yet playful anime discovery aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfCEXA00mabXVRiPxjJMM3qD43NrfmHt-04iuXvkjlgOjL7a7ricml1z5ynCBON_NmLP7qG8DW9jPUz_7vZWWb7gAs5OXmeH7TOQqs0HQoeatSpJsQmQ_dKWUS_3-nSMYO_8-LPh4TgPDNvWhaduQd75xzZA93wTo2TBOGO0edbeErOn8Gr2-bvZUzoV7JLlbRm_KaWS7thvr0hdQwbSvw6u-HJT7hvQYYDvK0ufj1Y9MVc4Qh_1iDrbTYFSQW7a0r-F-3qrp5M9jU"/>
+</div>
+<div class="p-4">
+<div class="flex gap-2 mb-2">
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-md text-[10px]">92% MATCH</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-white mb-1">DATA DREAMS</h4>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-3">Slice-of-life comedy set in a tech-support hub for sentient appliances.</p>
+<div class="flex justify-between items-center">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full border border-background bg-secondary"></div>
+<div class="w-6 h-6 rounded-full border border-background bg-tertiary"></div>
+</div>
+<span class="text-xs text-on-surface-variant">8k watching</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter py-stack-sm pb-8 bg-surface/80 backdrop-blur-3xl border-t border-outline-variant/10 rounded-t-xl shadow-[0_-4px_20px_rgba(115,46,228,0.15)]">
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full p-3 active:scale-90 transition-transform duration-150 group" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 active:scale-90 transition-transform duration-150 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 active:scale-90 transition-transform duration-150 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">subscriptions</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 active:scale-90 transition-transform duration-150 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+</a>
+</nav>
+<!-- FAB (Only on Home) -->
+<button class="fixed right-6 bottom-24 z-50 w-14 h-14 bg-primary text-on-primary rounded-2xl shadow-xl shadow-primary/30 flex items-center justify-center active:scale-90 transition-transform duration-150">
+<span class="material-symbols-outlined" style="font-size: 32px;">add_to_queue</span>
+</button>
+<script>
+        // Micro-interactions and atmospheric effects
+        document.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-background/95');
+                header.classList.remove('bg-background/80');
+            } else {
+                header.classList.add('bg-background/80');
+                header.classList.remove('bg-background/95');
+            }
+        });
+
+        // Add hover effects to genre chips (programmatically demonstrated)
+        const categories = ['Action', 'Romance', 'Mecha', 'Fantasy', 'Horror', 'Slice of Life'];
+        const container = document.createElement('div');
+        container.className = 'px-container-padding py-stack-md flex gap-2 overflow-x-auto hide-scrollbar sticky top-[64px] bg-background/80 backdrop-blur-md z-40 border-b border-outline-variant/10';
+        categories.forEach(cat => {
+            const pill = document.createElement('button');
+            pill.className = 'px-4 py-1.5 rounded-full border border-primary/30 text-primary font-label-md text-label-md whitespace-nowrap hover:bg-secondary-container hover:text-on-secondary-container hover:border-transparent transition-all';
+            pill.innerText = cat;
+            container.appendChild(pill);
+        });
+        document.querySelector('main').prepend(container);
+    </script>
+</body></html>
