@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime Shift | 추천 웹사이트</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Climate+Crisis&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <div class="ambient ambient-a"></div>
+    <div class="ambient ambient-b"></div>
+
+    <header class="hero">
+      <nav class="topbar glass">
+        <div>
+          <p class="eyebrow">KINETIC NEON</p>
+          <h1>오늘 볼 애니를 빠르게 고르는 추천 스테이션</h1>
+        </div>
+        <div class="topbar-actions">
+          <button class="button button-secondary" type="button" data-filter="winter">Winter Picks</button>
+          <button class="button button-primary" type="button">추천 받기</button>
+        </div>
+      </nav>
+
+      <section class="hero-grid">
+        <article class="feature glass">
+          <span class="badge badge-live">Live</span>
+          <p class="eyebrow">EDITOR'S CHOICE</p>
+          <h2>지금 바로 이어보기 좋은 작품들을 한 화면에 정리했습니다.</h2>
+          <p class="lead">
+            장르, 분위기, 러닝타임 감각을 함께 보고 고를 수 있게 만든 애니메이션 추천 화면입니다.
+            어두운 극장 같은 배경 위에 포스터를 띄워, 작품의 분위기가 먼저 보이도록 구성했습니다.
+          </p>
+          <div class="search-row">
+            <label class="sr-only" for="searchInput">애니 제목 검색</label>
+            <input id="searchInput" type="text" placeholder="작품명, 장르, 분위기로 검색">
+            <button id="searchBtn" class="button button-primary" type="button">검색</button>
+          </div>
+          <div class="chip-row" id="genreChips">
+            <button class="chip is-active" type="button" data-genre="all">All</button>
+            <button class="chip" type="button" data-genre="action">Action</button>
+            <button class="chip" type="button" data-genre="romance">Romance</button>
+            <button class="chip" type="button" data-genre="slice">Slice of Life</button>
+            <button class="chip" type="button" data-genre="fantasy">Fantasy</button>
+            <button class="chip" type="button" data-genre="thriller">Thriller</button>
+          </div>
+        </article>
+
+        <aside class="stats glass">
+          <p class="eyebrow">TRENDING SIGNAL</p>
+          <div class="stat">
+            <span class="stat-value">12</span>
+            <span class="stat-label">추천 카드</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">4.8</span>
+            <span class="stat-label">평균 선호도</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">Cyan</span>
+            <span class="stat-label">새 업데이트 표시</span>
+          </div>
+        </aside>
+      </section>
+    </header>
+
+    <main class="content">
+      <section class="section-head">
+        <div>
+          <p class="eyebrow">RECOMMENDATION GRID</p>
+          <h2>이번 시즌에 보기 좋은 작품</h2>
+        </div>
+        <p class="section-copy">포스터 카드와 메타데이터를 함께 배치해, 한눈에 분위기와 우선순위를 비교할 수 있게 했습니다.</p>
+      </section>
+
+      <section class="cards" id="recommendations" aria-live="polite"></section>
+    </main>
+
+    <nav class="bottom-nav glass">
+      <button class="nav-item is-active" type="button">Discover</button>
+      <button class="nav-item" type="button">Genres</button>
+      <button class="nav-item" type="button">Watchlist</button>
+      <button class="nav-item" type="button">Profile</button>
+    </nav>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
