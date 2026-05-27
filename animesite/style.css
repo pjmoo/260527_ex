@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+header {
+    background-color: #ff6b6b;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+.search {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+#searchInput {
+    padding: 0.5rem;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#searchBtn {
+    padding: 0.5rem 1rem;
+    background-color: #4ecdc4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#searchBtn:hover {
+    background-color: #45b9aa;
+}
+.recommendations {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.card-content {
+    padding: 1rem;
+}
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.card-score {
+    color: #ff9f1c;
+    font-weight: bold;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    color: #666;
+    font-size: 0.9rem;
+}
