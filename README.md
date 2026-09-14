@@ -1,27 +1,79 @@
-﻿# 자바스크립트 DOM 조작 & 애니 정보 사이트 미니 프로젝트 🎬
+# 자바스크립트 DOM 조작 & 애니 정보 사이트 미니 프로젝트 🎬
+
+<!-- workspace-readme-learning:start -->
+## 파일과 연결한 학습 안내
+
+아래 설명은 이 폴더의 실제 소스와 빌드 설정을 기준으로 정리했습니다. 기존 소개의 기능 설명은 연결된 파일과 함께 확인할 수 있습니다.
+
+### 주요 파일과 역할
+
+| 파일 | 역할과 읽을 내용 |
+| --- | --- |
+| [animesite/index.html](<animesite/index.html>) | 애니 추천 사이트 화면 |
+| [design/index.html](<design/index.html>) | Anime Shift  /  추천 웹사이트 화면 |
+| [01_dom-crud.html](<01_dom-crud.html>) | DOM CRUD 화면 |
+| [AGENTS.md](<AGENTS.md>) | 설계·학습·운영 내용을 설명하는 문서 |
+| [animesite/script.js](<animesite/script.js>) | 화면 요소·이벤트·상태 처리 — `fetchPopularAnime`, `searchAnime`, `displayAnime` |
+| [animesite/style.css](<animesite/style.css>) | 화면 레이아웃·색상·반응형 스타일 |
+| [DESIGN.md](<DESIGN.md>) | 설계·학습·운영 내용을 설명하는 문서 |
+| [design/script.js](<design/script.js>) | 화면 요소·이벤트·상태 처리 — `renderCards` |
+| [design/style.css](<design/style.css>) | 화면 레이아웃·색상·반응형 스타일 |
+
+### 실행과 설정 확인
+
+- [01_dom-crud.html](<01_dom-crud.html>)에서 화면을 확인합니다. 모듈·Fetch·외부 API를 사용하는 페이지는 로컬 HTTP 서버에서 열어 요청 실패 여부를 확인합니다.
+
+### 관련 PDF와 보충 설명
+
+- [5/27 강의](<../260629_ex/새 폴더/5-27/README.md>): DOM 요소 선택과 생성·수정·삭제를 화면의 실제 이벤트 처리와 연결합니다.
+
+이 링크는 구현을 이해하기 위한 관련 기초 자료입니다. 해당 강의가 이 저장소의 모든 기능이나 이후 버전의 API를 설명한다는 뜻은 아닙니다.
+
+### 읽는 순서와 복습
+
+- 화면 요소 선택 → 사용자 입력 → 상태 변경 → 렌더링 순서로 코드를 추적합니다. 없는 요소, 빈 입력, 반복 클릭에서 화면 상태가 의도대로 유지되는지 확인합니다.
+
+<!-- workspace-readme-learning:end -->
 
 웹 브라우저 화면의 뼈대(HTML)를 자바스크립트로 직접 제어하고, 실시간으로 태그를 추가/삭제하는 DOM 조작법을 익혀 이를 적용한 나만의 작은 웹 서비스를 직접 구현하는 실습입니다.
 
 ---
 
-## ?뱛 ?숈뒿 ?뚯씪 援ъ꽦 (Files)
+## 📂 학습 파일 구성 (Files)
 
-- [01_dom-crud.html](file:///C:/workspace/260527_ex/01_dom-crud.html) : 자바스크립트를 이용해 화면에 있는 글자를 변경하고, 새 버튼을 만들거나 삭제하는 DOM 기초 실습
-- [animesite/](file:///C:/workspace/260527_ex/animesite/) : 자바스크립트와 CSS로 상호작용하도록 만든 정적 웹 애니메이션 정보 허브 사이트 프로젝트 폴더
-- [design/](file:///C:/workspace/260527_ex/design/) : 애니 사이트의 전반적인 색상, 버튼, 레이아웃을 시각적으로 다듬은 디자인 연구 폴더
-- [downloaded/](file:///C:/workspace/260527_ex/downloaded/) : 작업에 유용하게 참고하기 위해 다운로드받은 외부 UI 템플릿과 명세서 파일 모음
-- [AGENTS.md](file:///C:/workspace/260527_ex/AGENTS.md) / [DESIGN.md](file:///C:/workspace/260527_ex/DESIGN.md) : 프로젝트 요구사항 분석과 디자인 방향을 정리해 둔 문서
+- [01_dom-crud.html](<01_dom-crud.html>) : 자바스크립트를 이용해 화면에 있는 글자를 변경하고, 새 버튼을 만들거나 삭제하는 DOM 기초 실습
+- [animesite/](<animesite>) : 자바스크립트와 CSS로 상호작용하도록 만든 정적 웹 애니메이션 정보 허브 사이트 프로젝트 폴더
+- [design/](<design>) : 애니 사이트의 전반적인 색상, 버튼, 레이아웃을 시각적으로 다듬은 디자인 연구 폴더
+- [downloaded/](<downloaded>) : 작업에 유용하게 참고하기 위해 다운로드받은 외부 UI 템플릿과 명세서 파일 모음
+- [AGENTS.md](<AGENTS.md>) / [DESIGN.md](<DESIGN.md>) : 프로젝트 요구사항 분석과 디자인 방향을 정리해 둔 문서
 
 ---
 
-## ?썱 諛곗슫 ?듭떖 媛쒕뀗 (What We Learned)
+## 🛠 배운 핵심 개념 (What We Learned)
 
 - **DOM (Document Object Model) 조작**: HTML 문서를 객체화하여 자바스크립트가 실시간으로 화면의 글자를 지우고, 색상을 바꾸고, 입력값에 따라 요소를 화면에 바로 꽂아 넣는 브라우저 상호작용 원리를 이해합니다.
 - **UI/UX 구현**: CSS 스타일시트와 자바스크립트 이벤트(클릭, 스크롤 등)를 결합하여 사용자가 만졌을 때 부드럽고 매끄럽게 작동하는 화면 레이아웃을 직접 설계합니다.
 
 ---
 
-## ?? ?ㅽ뻾 諛??뺤씤 諛⑸쾿 (How to Run)
+## 🚀 실행 및 확인 방법 (How to Run)
 
-1. 미니 프로젝트 화면을 보고 싶다면 [animesite/index.html](file:///C:/workspace/260527_ex/animesite/index.html) 파일을 크롬 등 브라우저로 엽니다.
-2. DOM 기본 조작 테스트는 [01_dom-crud.html](file:///C:/workspace/260527_ex/01_dom-crud.html)을 열고, 브라우저의 콘솔 창(F12)을 동시에 켜두고 실시간 반응을 확인하세요.
+1. 미니 프로젝트 화면을 보고 싶다면 [animesite/index.html](<animesite/index.html>) 파일을 크롬 등 브라우저로 엽니다.
+2. DOM 기본 조작 테스트는 [01_dom-crud.html](<01_dom-crud.html>)을 열고, 브라우저의 콘솔 창(F12)을 동시에 켜두고 실시간 반응을 확인하세요.
+
+<!-- pdf-til-supplement:start -->
+## TIL 부연 설명 — PDF와 연결하기
+
+기존 실습 내용을 이해하기 위한 PDF 기반 부연 설명이다. 아래 예시는 개념을 설명하기 위한 것이며, 이 프로젝트에서 실행해 관찰한 결과와는 구분한다. 페이지 번호는 표지를 포함한 PDF 순서다.
+
+함께 읽을 파일: [animesite/index.html](<animesite/index.html>) · [design/index.html](<design/index.html>) · [01_dom-crud.html](<01_dom-crud.html>)
+
+### HTML 구조가 화면 변경으로 이어지는 과정
+
+브라우저는 HTML을 읽어 DOM 객체 트리를 만든다. querySelector로 얻는 것은 HTML 문자열이 아니라 현재 문서 안의 요소 참조이며, 찾지 못하면 null이다. classList로 상태를 바꾸면 표현 방식은 CSS가 담당하고, textContent로 값을 넣으면 문자열을 HTML 태그로 해석하지 않는다.
+
+**예시로 이해하기:** 카드 목록을 만든다고 가정하면 데이터 배열 → createElement로 요소 생성 → textContent로 제목 지정 → 부모에 append 순서로 생각할 수 있다. 사용자 입력을 그대로 innerHTML에 넣는 방식은 피한다. HTML·CSS 실습에서는 먼저 정적인 구조를 이해한 뒤 이 과정을 동적 화면의 확장으로 읽는다.
+
+근거: 161-1 Document Object Model — [4쪽](<../260629_ex/새 폴더/5-27/161-1_Document_Object_Model.pdf#page=4>) · [6쪽](<../260629_ex/새 폴더/5-27/161-1_Document_Object_Model.pdf#page=6>) · [14쪽](<../260629_ex/새 폴더/5-27/161-1_Document_Object_Model.pdf#page=14>) · [18쪽](<../260629_ex/새 폴더/5-27/161-1_Document_Object_Model.pdf#page=18>)
+
+<!-- pdf-til-supplement:end -->
